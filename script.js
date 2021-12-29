@@ -39,3 +39,16 @@ function limpar() {
     })
 }
 limpar()
+
+function tarefaCompleta() {
+    const tarefas = document.getElementById('lista-tarefas');
+    tarefas.addEventListener('dblclick', function (event) {
+        let tarefa = document.querySelectorAll('li');
+        for (let index = 0; index < tarefa.length; index += 1) {
+            if (tarefa[index].classList.contains('completed')) {
+            }
+        }
+        event.target.classList.toggle('completed'); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
+    });
+}
+tarefaCompleta()
