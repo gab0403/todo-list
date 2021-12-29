@@ -1,23 +1,30 @@
 function botaoadd() {
-    let botao = document.querySelector("button");
+    const botao = document.querySelector("button");
     botao.addEventListener("click", function () {
         mostraTarefa()
-        const input = document.querySelector('input').value = '';
+        const input = document.querySelector('input').value = ''; //limpa o input depois de criar a tarefa.
     });
 }
 botaoadd();
-
-
 
 function mostraTarefa() {
     const lista = document.querySelector('ol')
     const input = document.querySelector('input').value
     const tarefa = document.createElement('li')
     tarefa.classList.add('tarefas')
-    const textoTarefa = document.createTextNode(input)
+    const textoTarefa = document.createTextNode(input) //cria o texto que for adicionado no input.
     tarefa.appendChild(textoTarefa)
     lista.appendChild(tarefa)
 }
-
-
-
+function corTarefa() {
+    const tarefas = document.getElementById('lista-tarefas');
+    tarefas.addEventListener('click', function (event) {
+        let tarefa = document.querySelectorAll('li');
+        for (let index = 0; index < tarefa.length; index += 1) {
+            if (tarefa[index].style.backgroundColor = '#bde0fe') {
+        }
+    }
+        event.target.style.backgroundColor = 'rgb(128, 128, 128)';
+    });
+}
+corTarefa()
