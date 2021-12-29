@@ -20,7 +20,7 @@ function mostraTarefa() {
 function corTarefa() {
     const tarefas = document.getElementById('lista-tarefas');
     tarefas.addEventListener('click', function (event) {
-        let tarefa = document.querySelectorAll('li');
+        const tarefa = document.querySelectorAll('li');
         for (let index = 0; index < tarefa.length; index += 1) {
             if (tarefa[index].style.backgroundColor = '#bde0fe') {
             }
@@ -33,7 +33,7 @@ corTarefa()
 
 function limpar() {
     const lista = document.querySelector('ol')
-    let limpar = document.getElementById("apaga-tudo")
+    const limpar = document.getElementById("apaga-tudo")
     limpar.addEventListener("click", function () {
         lista.innerHTML = ''; //substitui o HTML pelo "vazio", ou seja, apaga a lista. 
     })
@@ -43,7 +43,7 @@ limpar()
 function tarefaCompleta() {
     const tarefas = document.getElementById('lista-tarefas');
     tarefas.addEventListener('dblclick', function (event) {
-        let tarefa = document.querySelectorAll('li');
+        const tarefa = document.querySelectorAll('li');
         for (let index = 0; index < tarefa.length; index += 1) {
             if (tarefa[index].classList.contains('completed')) {
             }
@@ -52,3 +52,17 @@ function tarefaCompleta() {
     });
 }
 tarefaCompleta()
+
+function apagaTarefaCompleta() {
+    const remover = document.getElementById("remover-finalizados");
+    remover.addEventListener('click', function () {
+        const tarefa = document.querySelectorAll('li');
+        for (let index = 0; index < tarefa.length; index += 1) {
+            if (tarefa[index].classList.contains('completed')) {
+        tarefa[index].parentNode.removeChild(tarefa[index])
+            }
+        }
+        
+    });
+}
+apagaTarefaCompleta()
