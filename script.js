@@ -36,6 +36,8 @@ function limpar() {
     const limpar = document.getElementById("apaga-tudo")
     limpar.addEventListener("click", function () {
         lista.innerHTML = ''; //substitui o HTML pelo "vazio", ou seja, apaga a lista. 
+
+        localStorage.clear() //apaga tudo do localStorage
     })
 }
 limpar()
@@ -59,10 +61,29 @@ function apagaTarefaCompleta() {
         const tarefa = document.querySelectorAll('li');
         for (let index = 0; index < tarefa.length; index += 1) {
             if (tarefa[index].classList.contains('completed')) {
-        tarefa[index].parentNode.removeChild(tarefa[index])
+                tarefa[index].parentNode.removeChild(tarefa[index])
             }
         }
-        
+        localStorage.clear() //apaga finalizados do localStorage
     });
 }
 apagaTarefaCompleta()
+
+
+function salvarLocalStorage() {
+    const botao = document.getElementById('salvar-tarefas');
+    botao.addEventListener('click', function () {
+        const tarefas = document.getElementById('lista-tarefas');
+        localStorage.setItem('lista', JSON.stringify(tarefas.innerHTML)) //cria/salva o item no localStorage e converte os valores do JS para string.
+
+    })
+}
+salvarLocalStorage()
+
+function restauraLocalStorage() {
+    const tarefas = document.getElementById('lista-tarefas');
+    const restaura = localStorage.getItem('lista'); //recupera o valor da chave;
+    tarefas.innerHTML = JSON.parse(restaura); //recebe uma string JSON e a transforma em um objeto JavaScript.
+
+}
+restauraLocalStorage()
