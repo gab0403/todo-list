@@ -87,3 +87,30 @@ function restauraLocalStorage() {
 
 }
 restauraLocalStorage()
+
+function tarefaSelecionada() {
+    const tarefas = document.getElementById('lista-tarefas');
+    tarefas.addEventListener('click', function (event) {
+        const tarefa = document.querySelectorAll('li');
+        for (let index = 0; index < tarefa.length; index += 1) {
+            if (tarefa[index].classList.contains('selected')) {
+            }
+        }
+        event.target.classList.toggle('selected'); //toglle verifica se tem ou não a classe. Se tiver ela é removida, se não tiver é adicionada ao disparar o evento.
+    });
+}
+tarefaSelecionada()
+
+function apagaTarefaSelecionada() {
+    const remover = document.getElementById("remover-selecionado");
+    remover.addEventListener('click', function () {
+        const tarefa = document.querySelectorAll('li');
+        for (let index = 0; index < tarefa.length; index += 1) {
+            if (tarefa[index].classList.contains('selected')) {
+                tarefa[index].parentNode.removeChild(tarefa[index])
+            }
+        }
+        localStorage.clear() //apaga finalizados do localStorage
+    });
+}
+apagaTarefaSelecionada()
