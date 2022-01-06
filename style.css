@@ -2,24 +2,27 @@
     text-align: center;
     color: #9b5de5;
 }
+
 #funcionamento {
     text-align: center;
     color: #9b5de5;
 }
+
 #tarefa {
     display: flex;
     justify-content: center;  
 }
+
 body {
     background-color: #bde0fe;  
 }
+
 #lista-tarefas {
  padding-left: 45%;
 }
+
 .completed {
 text-decoration: line-through solid rgb(0, 0, 0);
 }
 
-.selecionada{
-    color: royalblue;
-}
+
