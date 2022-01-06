@@ -25,7 +25,7 @@ function corTarefa() {
     tarefas.addEventListener('click', function (event) {
         const tarefa = document.querySelectorAll('li');
         for (let index = 0; index < tarefa.length; index += 1) {
-            if (tarefa[index].style.backgroundColor = '#bde0fe') {
+            if (tarefa[index].style.backgroundColor = '#ecf8f8') {
             }
         }
         event.target.style.backgroundColor = 'rgb(128, 128, 128)';

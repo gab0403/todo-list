@@ -1,28 +1,85 @@
 #titulo {
     text-align: center;
-    color: #9b5de5;
+    color: #f7aef8;
+    font-weight: bold;
 }
 
 #funcionamento {
     text-align: center;
-    color: #9b5de5;
+    color: #f7aef8;
+    text-decoration: overline
 }
 
 #tarefa {
     display: flex;
     justify-content: center;  
+    
 }
 
 body {
-    background-color: #bde0fe;  
+    background-color: #ecf8f8;  
 }
 
 #lista-tarefas {
- padding-left: 45%;
+    padding-left: 45%;
 }
 
 .completed {
-text-decoration: line-through solid rgb(0, 0, 0);
+    text-decoration: line-through solid rgb(0, 0, 0);
 }
 
+button {
+   padding: 10px;
+    border-radius: 5px;
+}
 
+#criar-tarefa {
+    background-color: #f0a6ca;
+    border-color: #f0a6ca;
+    margin-right: 10px;
+}
+
+#apaga-tudo {
+    background-color: #ee4266;
+    border-color: #ee4266;
+    margin-right: 10px;
+}
+
+#remover-finalizados {
+    background-color: #ee4266;
+    border-color: #ee4266;
+    margin-right: 10px;
+}
+
+#remover-selecionado {
+    background-color: #ee4266;
+    border-color: #ee4266;
+    margin-right: 10px;
+}
+
+#salvar-tarefas {
+    background-color: #f0a6ca;
+    border-color: #f0a6ca;
+    margin-right: 10px;
+}
+  #mover-cima {
+    background-color: #f4d35e;
+    border-color: #f4d35e ;
+    margin-right: 10px;
+}
+  
+  #mover-baixo {
+    background-color: #f4d35e;
+    border-color: #f4d35e ;
+    margin-right: 10px;
+}
+  #botao1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+  #botao2 {
+   display: flex;
+   justify-content: center;
+} 
