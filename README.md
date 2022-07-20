@@ -1,6 +1,6 @@
 # Projeto To do List
 
-## Foi desenvolvida as habilidades de:
+## Foram desenvolvidas as habilidades de:
 
 * Manipulação de CSS;
 * Manipulação de Javascript.
