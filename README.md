@@ -6,7 +6,7 @@
 * Manipulação de Javascript.
 
 ## Acesse em:
-[To do List](https://todo-list-gab0403.vercel.app/)
+ - [To do List](https://todo-list-gab0403.vercel.app/)
 
 ## Tecnologias utilizadas:
 
